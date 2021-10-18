@@ -1,4 +1,5 @@
-# taken from this StackOverflow answer: https://stackoverflow.com/a/39225039
+# Code mostly taken from this StackOverflow answer: https://stackoverflow.com/a/39225039
+
 import requests
 import os
 import shutil
