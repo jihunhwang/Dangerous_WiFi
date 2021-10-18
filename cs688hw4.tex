@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage{config}
+
+
+\begin{document}
+\noindent \textbf{CS 688 Probabilistic Graphical Models, Spring 2021 \hfill Assignment \#4}\\
+\; \hfill Hwang, Jihun
+
+\hrulefill
+
+\begin{problem}{1 (Derivation of conditional distribution)}
+Derive a formula for $p(y_i=1|y_{-i}, b, w)$.
+\end{problem}
+
+\newcommand{\nb}[1]{\mathrm{nb}(#1)}
+\newcommand{\pairs}{\mathrm{pairs}}
+
+\begin{proof}
+By the Bayes' rule,
+\begin{align*}
+    p(y_i=1|y_{-i}, b, w)
+    & = \frac{p(y_i=1, y_{-i} \mid  b, w)}{p(y_i=1, y_{-i} \mid  b, w) + p(y_i=-1, y_{-i} \mid  b, w)}
+\end{align*}
+Note the following
+\begin{align*}
+    & p(y_i, y_{-i} \mid  b, w) \\
+    & = \frac{1}{Z} \prod_{k=1}^d \exp(b_k y_k) \prod_{(k,j) \in \pairs} \exp(w_{kj} y_k y_j) \\
+    & = \frac{1}{Z} \underbrace{\left(\exp(b_i y_i) \prod_{(i, j) \in \pairs} \exp(w_{ij} y_i y_j) \right)}_{\text{When } k = i} \underbrace{\left( \prod_{k=1, k\neq i}^d \exp(b_j y_j) \prod_{(k,j) \in \pairs} \exp(w_{kj} y_k y_j) \right)}_{=: P(i)} \\
+    & = \frac{1}{Z} P(i) \exp(b_i y_i) \left(\prod_{j \in \nb{i}} \exp(w_{ij} y_i y_j)\right) 
+\end{align*}
+Therefore,
+\begin{align*}
+    p(y_i=1 \mid y_{-i}, b, w)
+    & = \frac{p(y_i=1, y_{-i} \mid  b, w)}{p(y_i=1, y_{-i} \mid  b, w) + p(y_i=-1, y_{-i} \mid  b, w)} \\
+    & = \frac{\exp(b_i) \left(\prod_{j \in \nb{i}} \exp(w_{ij} y_j)\right)}{\exp(b_i ) \left(\prod_{j \in \nb{i}} \exp(w_{ij} y_j)\right) + \exp(-b_i) \left(\prod_{j \in \nb{i}} \exp(-w_{ij} y_j)\right)} \\
+    & = \frac{1}{1+\exp(-2b_i) \prod_{j \in \nb{i}} \exp(-2 w_{ij} y_j)} \\
+    & = \frac{1}{1+\exp\left(-2b_i - 2 \sum_{j \in \nb{i}} w_{ij} y_j \right)} \\
+    & = \boxed{\sigma\left( 2b_i + 2 \sum_{j \in \nb{i}} w_{ij} y_j \right)}
+\end{align*}
+\end{proof}
+
+\newpage
+
+\begin{problem}{2 (Pseudo-Code for Gibbs Sampling)} Write pseudo-code for the Gibbs sampling algorithm.
+\end{problem}
+
+\begin{proof} The following algorithm makes $d$ samples at each iteration, and returns the list of all samples generated (list of list of samples).  
+\begin{algorithm}[htp!]
+\SetAlgoLined
+\KwResult{Returns a list of the samples of $y$ after each iteration.}
+$\texttt{list\_of\_samples} = []$\;
+\For{$k$ from $1$ to $\texttt{num\_iterations}$}
+{
+    $k\texttt{-th\_sample} = []$\;
+    \For{$j$ from $1$ to $d$}
+    {
+        $y \leftarrow p(y_i \mid y_{-i}, b, w)$\;
+        Add $y$ to $i\texttt{-th\_sample}$\;
+    }
+    Add $k  \texttt{-th\_sample}$ to $\texttt{list\_of\_samples}$\;
+}
+{
+    return $\texttt{list\_of\_samples}$\;
+}
+\caption{$\texttt{Gibbs\_Sampling}$($\texttt{num\_iterations}, b, w$)}
+\label{alg:gibbssampling}
+\end{algorithm}
+\end{proof}
+
+\newpage
+
+\begin{problem}{3 (Samples)}
+
+\end{problem}
+
+\begin{proof}
+Note that we are assuming $b_i = 0$ for all $i$ and $w_{ij} = \overline{w} \in \{ 0, 0.1, 0.2, 0.3, 0.4, 0.5 \}$. Hence,
+\begin{align}
+    p(y_i=1 \mid y_{-i}, b, w) = \sigma\left( 2b_i + 2 \sum_{j \in \nb{i}} w_{ij} y_j \right) = \sigma\left(2 \; \overline{w} \sum_{j \in \nb{i}} y_j\right)
+    \label{eq:problem3}
+\end{align}
+The plots are as follows
+\newcommand{\wzero}{\includegraphics[width=6em]{fig/0.jpg}}
+\newcommand{\wone}{\includegraphics[width=6em]{fig/1.jpg}}
+\newcommand{\wtwo}{\includegraphics[width=6em]{fig/2.jpg}}
+\newcommand{\wthree}{\includegraphics[width=6em]{fig/3.jpg}}
+\newcommand{\wfour}{\includegraphics[width=6em]{fig/4.jpg}}
+\newcommand{\wfive}{\includegraphics[width=6em]{fig/5.jpg}}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $\overline{w} = 0$ & $\overline{w} = 0.1$ & $\overline{w} = 0.2$ \\
+        \wzero & \wone & \wtwo  \\
+        \hline 
+        $\overline{w} = 0.3$ & $\overline{w} = 0.4$ & $\overline{w} = 0.5$ \\
+        \wthree & \wfour & \wfive \\
+        \hline
+    \end{tabular}
+\end{table}
+\end{proof}
+
+
+\begin{problem}{4 (Discussion)}
+Explain why the images from the previous question look like they do and why they change for various values of $\bar{w}$.
+\end{problem}
+
+\begin{proof}
+Since the plot for $\overline{w}$ is conspicuously distinct from -- for example -- $\overline{w} = 0$, let us compute the probability $p(y_i \mid y_{-i}, b, w)$ for those two cases using \cref{eq:problem3}
+\begin{align*}
+    p(y_i =1 \mid y_{-i}, b = [0,\cdots, 0], w = [0, \cdots, 0])
+    & = \sigma(0) = \frac{1}{2} \\
+    p(y_i =1 \mid y_{-i}, b = [0,\cdots, 0], w = [0.5, \cdots, 0.5])
+    & = \sigma\left( \sum_{j \in \nb{i}} y_j \right)
+\end{align*}
+where $\ds 0.018 \approx \sigma(4) \leq \sigma\left( \sum_{j \in \nb{i}} y_j \right) \leq \sigma(-4) \approx 0.98$. The first probability when $\overline{w} = 0$ remains constant regardless of its neighbors, but when $\overline{w} = 0.5 > 0$, the probability of $y_i = 1$ depends highly on its neighboring nodes. 
+
+(I presume the above should still count as being one paragraph with four or less sentences?)
+\end{proof}
+
+\newpage
+
+\begin{problem}{5 (Mixing Times)}
+
+\end{problem}
+
+\begin{proof} $\;$
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.8]{fig/iterations_vs_E[y].jpg}
+\end{figure}
+
+$\;$
+\end{proof}
+
+\begin{problem}{6 (Discussion)}
+Do your samples give the correct value of $\mathbb{E}[y]$? When do the samples look better or worse?
+\end{problem}
+
+\begin{proof}
+$\mathbb{E}[y]$ does not seem to converge to $0$, at least for $\overline{w}=0.4$ and $0.5$, based on the plot above. If a pixel has four white neighbors, the probability of it becoming a black pixel decreases as $\overline{w}$ increases. For example, when $\overline{w} = 0.4$, the probability is only $\ds 1-\sigma(2 \times 2 \times 0.4) \approx 0.168$, whereas when $\overline{w} = 0.1$ then $\ds 1-\sigma(2 \times 2 \times 0.1) \approx 0.401$.
+\end{proof}
+
+\newpage
+
+\begin{problem}{7 (Fixed Parameter Denoising)} 
+Intuitively, given a ``noisy image" $x$, we should think of this defining a probabilistic model over the ``clean image" $y$. We can think of the model as being defined exactly as in the previous problem, except that $b(x, \theta)$ and $w(x, \theta)$ are now functions of the input $x$ as well as some parameters $\theta$. 
+\begin{align}
+    p(y \vert x, \theta) = \frac{1}{Z(x)} \prod_{i=1}^d \exp( b_i(x,\theta ) y_i ) \prod_{(i,j)\in \text{pairs}} \exp(w_{ij}(x,\theta ) y_i y_j)
+\end{align}
+Determine the parameters by the simple mapping of $b_i=0.5 x_i$ and $w_{ij}=0.3$. Run 100 iterations of Gibbs sampling. Show an image of $\mu$, the mean value of $y$ you obtain over those samples, and report the mean per-pixel absolute difference of $\mu$ from the true output.
+\end{problem}
+
+\begin{proof} The image of $\mu$ is as follows:
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{fig/mean_y.jpg}
+\end{figure}
+
+and the error reported was $0.798246753246754$.
+\end{proof}
+
+\newpage
+
+\begin{problem}{8 (Varying Parameters)} Describe:
+\vspace{-\topsep}
+\begin{itemize}
+    \item[(a)] how you tried to find better parameters,
+    \item[(b)] show an image of your final denoised image, and 
+    \item[(c)] report the final error
+\end{itemize}
+
+\end{problem}
+
+\begin{proof} $\;$ \vspace{-\topsep}
+\begin{itemize}
+    \item[(a)] Iterating over the list
+    \begin{align*}
+        \theta_1 & \in \{ 0.05, 0.1, 0.15, \cdots, 1\} \;(=\texttt{np.linspace}(0.05, 1, 20))\\
+        \theta_2 & \in \{ 0.05, 0.1, 0.15, \cdots, 1\}
+    \end{align*}
+    should be the simplest solution but has resulted in a memory error unfortunately. 
+    
+    I fixed $\theta_2$ first, say $\theta_2 = 0.3$ (as we did in the previous problem), and iterated $\theta_1$ over $\{ 0.05, 0.1, 0.15, \cdots, 1\}$. When $\theta_2 = 0.3$, $\theta_1 = 1$ has given the smallest possible error of $0.7538181818181819$. 
+    
+    Then I fixed $\theta_1 = 1$ and iterated $\theta_2$ over $\{ 0.05, 0.1, 0.15, \cdots, 1\}$, which has given us an even smaller error -- $0.13064935064935065$ when $\theta_2 = 0.8$.
+    
+    \item[(b)] The figure is as below:
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics{fig/q8_mean_y.jpg}
+    \end{figure}
+    
+    \item[(c)] The reported minimum error is $0.13064935064935065$ and the corresponding parameters were $\theta_1 = 1$ and $\theta_2 = 0.8$.
+\end{itemize}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,349 @@
+Admonish: warn
+
+Assail: attack
+Assiduous: diligent
+Assiduously: with great care
+Assuage: make less severe
+Auspicious: promising, lucky
+Austere: solemn, chaste, frugal, artless, strict
+Autocratic: tyrannical
+Astute: shrewd, smart
+
+Avert: prevent
+Aversion: dislike
+Evasion: avoid committment
+
+Abjudicate: judge
+Abjure: give up, renounce
+Abject: obsequious, sycophatic
+
+Affluent: wealthy
+
+Attenuate: taper off
+
+Aphorism: short saying, epigram
+
+Antipathy: hatred
+Apathy: indifference, unconcern
+Animosity: hostility, enmity
+
+Appreciable: noticeable, considerable
+
+Benign: harmless
+Banal: cliche
+Beguile: attract, entertain
+Bereft: sad because of loss
+Bemoan: lament
+
+Besotted: very infatuated
+Infatuation: intense short-lived passion
+
+Brusquely: bluntly
+
+Captivate: fascinate, enchant, enthrall
+Capitulate: yield, surrender
+Recapitulation: summary
+Capricious: unpredictable, changable
+
+Complicit: taking part in
+Complaisant: cheerfully obedient
+Complacent: self-satisfied, contented to a fault
+Content: self-satisfied
+Contentious: causing arguments
+
+Commensurate: equivalent
+
+Chivalrous: courteous, gallant
+
+Chagrin: dismay
+Charlatan: con artist
+Nonchalant: unconcerned, indifferent
+
+Circumvent: get out of duty, avoid
+Circumscribe: restrict
+Circumspect: cautious
+
+Contemptuous: scornful
+
+Cornucopia: abundant supply
+Copius: abundant
+Covivial: sociable
+Corroborate: confirm
+Contrite: remorseful, regretful, penitent
+Coalesce: fuse, amalgamate
+
+Compound: make more intense
+Confound: baffle, utterly confuse; invalidate, refute, disprove
+Profound: deep and complete
+Profusion: abundance
+
+Collusion: secret cooperation
+
+Concede: admit wrongdoing
+Recede: go back, retreat; diminish
+Conceive: come up with (a plan)
+Contend: maintain; compete
+
+Curmudgeon: grouch, old trout
+
+Crystallize: become definite
+
+Destitute: poor
+
+Diatribe: bitter verbal attack, tirade, reproach, criticize
+Divulge: reveal
+Disparate: contrasting, fundamentally different
+Dispassionate: objective, impartial
+Disperse: scatter
+Dissipate: squander
+Disseminate: spread
+Disinterested: unbiased
+Dilate: enlarge, expand; elaborate
+Dilapidate: run down, ruin
+
+Discrete: separate
+Discreet: careful, inconspicuous
+
+Dupe: swindle
+Duplicity: deceit
+
+Decorum: proper conduct
+
+Doleful: very sad
+
+Decimation: complete destruction
+Deleterious: harmful
+Deteriorate: get worse
+Exacerbate: make worse, aggreviate
+Exasperate: infuriate, irritate
+Exonerate: free from blame, justify, exculpate
+Extrapolate: estimate or conclude
+Excruciating: very painful
+
+Encumber: hold back
+
+Enmity: hatred, hostility, animosity
+Enormity: great wickedness
+Eminent: highly respected
+Prominent: famous, noticeable
+Entice: tempt, persuade
+Endemic: native, indegenous
+
+Elicit: call forth
+Illicit: illegal
+
+Effacious: effective
+Efficacious: effective
+Effervescent: bubbly; vivacious, lively
+
+Evasive: avoiding commitment
+
+Esoteric: understood by few
+
+Erudite: scholarly
+
+Fledgling: inexperienced
+Flippant: not showing respect, frivolous, thoughtless
+
+Unforthcoming: not cooperative, not willing to divulge, reticent
+Forthcoming: easily available
+Forthright: honest in speaking
+
+Humdrum: lacking excitement
+
+Histrionic: overly theatrical
+
+Imminent: about to happen, impending
+Eminent: famous
+Preeminent: outstanding
+Preempt: prevent, forestall; commandeer
+Impecunious: lacking money, indigent
+Impending: imminent, about to happen
+Impetuous: rash, impulsive
+Impervious: uneffective, impermeable
+Imperious: domineering, commanding
+Impede: hinder, hamper
+Impugn: call into question, challenge
+Impudent: rude, impertinent
+Imprudent: not wise
+Imbibe: absorb ideas
+Immaterial: irrelevant
+
+Iconoclastic: defying tradition
+Innocuous: harmless, benign, innoxious
+Incense: make angry
+Incisive: clear-thinking, acute, penetrating
+Inchoate: not fully formed
+
+Ineffable: cannot be put in words
+Inimitable: without equal
+Intimate: familiar
+Intimation: indirect suggestion
+Inscrutable: enigmatic, mysterious
+Industrious: diligent, hard-working
+Illustrious: famous, distinguished, eminent
+
+Indigent: poor
+Indigenous: native
+Indulgent: easy going, tolerant
+Ingenuous: innocent
+Ingenious: inventive, creative
+Disingenious: pretending to be honest
+
+Tarnish
+Truculence: tendency to fight
+
+Estimable: deserving respect
+
+Evanescent: short-lived
+Ephemeral: short-lived
+Perennial: everlasting
+Transitory: short-lasting
+
+Jocular: humorous
+
+Euphoria: extreme joy
+Jubilant: over-joyed
+Judicious: wise, prudent, careful, shrewd
+Juvenile: childish
+Shrewd: astute, sagacious
+Sagacious: wise
+Sanguine: optimistic	
+
+Perfunctory: done routinely
+
+Pellucid: easy to understand, transparent
+Lucid: clear
+
+Lacerate: distress deeply
+Lachrymose: weepy
+Languish: become weak
+Lavish: luxurious, extravagent
+
+Misconstrue: misinterpret
+
+Malodorous: stinky
+Malfeasance: misconduct
+Malicious: malevolent
+Malignant: malevolent
+Malady: illness, indisposition
+
+Moribound: about to die
+
+Officious: meddlesome
+Meddlesome: interfering
+Mettlesome: full of spirit and courage
+
+Mellifluous: sweet-sounding
+
+Miser:
+Philistine: hater of culture
+
+Perfunctory: done routinely
+
+Phlegmatic: clam
+Pragmatic: practical
+Problematic: controversial, difficult
+Provisional: not final
+Provident: thinking forward
+
+Precarious: dangerous
+Precautious: careful
+Percipient: perceptive
+Precipitate: hasty, abrupt
+Precedent: earlier example
+Presumptuous: overly forward
+Presumption: assumption
+
+Prevail: triumph over
+
+Modicum: small amount
+Pittance: small amount
+Pithy: concise
+Succinct: concise
+
+Rebuke: criticize
+Reproach: criticize
+Diatribe: criticize
+
+Rescind: cancel officially
+Respite: pause from work
+Resolve: determine, settle
+Resolute: determined
+Irresolute: uncertain how to act
+
+Recrimination: mutual attack
+Reservation: doubt, misgiving
+
+Reverent: deeply respectful
+
+Sardonic: mocking
+
+Sanctimonious: holier-than-thou
+
+Scintillating: brilliant
+
+Scrupulous: using extreme care, meticulous, fastidious
+Unscrupulous: unprincipled, unethical
+
+Steadfast: unwavering
+
+Stalwart: dependable
+Thwart: frustrate, block
+Athwart: across; in opposition to
+
+Surreptitious: stealthy
+Serendipitous: lucky
+
+Solicitude: feeling of concern
+Solicitous: anxious to please
+
+Squelch: suppress
+
+Truncate: shorten
+Truculent
+Trenchant: incisive
+Trite: unoriginal, stale, banal
+
+Sycophantic: servile, obsequious
+Obstreperous: noisily defiant
+Obsequious: servile, fawning, sycophantic, flatter
+Ostentatious: showy
+
+Vacillate: waver, hesitate
+Vicarious: indirect, not lived directly
+Voracious: very hungry
+Ravenous: very hungry
+Vindicate: justify, free from blame, exonerate
+Vindictive: revengeful, spiteful
+Vituperate: scold harshly
+
+Veritable: without a doubt
+
+
+
+
+
+Use the initial counseling in email. No hand signature. Digitally sign it.
+Email the order and SSD/DLC to SSG Garrett Buckner.
+Body fat form -- valid within 60 days
+Student information sheet needs to be complete
+
+
+Jones: cierra.d.jones5.mil@mail.mil
+Leach: JOSEPHMLYNCH6@GMAIL.COM
+McFadden: jennifer.mcfadden2.mil@mail.mil
+Metz: jonathan.d.metz3.mil@mail.mil
+Van Buren: martin.r.vanburen.mil@mail.mil
+Watts: david.g.walsh8.mil@mail.mil
+Sampson: kevin.r.sampson7.mil@mail.mil
+Owens: michael.l.owens82.mil@mail.mil
+
+Samuel Keenan [samuel.d.keenan@hotmail.com]
+garrett.c.buckner.mil@mail.mil
+levi.r.rice2.mil@mail.mil
+
+joseph.m.lynch43.mil@mail.mil; jennifer.mcfadden2.mil@mail.mil; jonathan.d.metz3.mil@mail.mil; martin.r.vanburen.mil@mail.mil; david.g.walsh8.mil@mail.mil; michael.l.owens82.mil@mail.mil; kevin.r.sampson7.mil@mail.mil
+
+
+
