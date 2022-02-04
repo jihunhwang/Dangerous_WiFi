@@ -1,0 +1,18 @@
+Method of access: Make a locally hosted website that either through a download button or automatically downloads exploit file
+
+Exploit: Anything that works from Metasploit (I suggest using Windows xp or anything old)
+https://www.offensive-security.com/metasploit-unleashed/exploits/
+https://www.offensive-security.com/metasploit-unleashed/armitage/
+
+Implant - Python script that starts at boot which includes C2 and exfil
+
+C2 - command to delete everything, command to send back a certain file / file type, transmit data on command
+
+Exfil - upload requested data to google drive
+
+Implant obfuscation - Use pyarmor (or some other library that works) to try to hide python script and delete exploit binary file after it's not needed
+
+C2 obfuscation - encrypt (doesn't count as obfuscation) and encode commands in images / videos using stenography. Put encoded messages in "commands" folder on Google drive which the implant will pull from every so often
+https://medium.com/swlh/lsb-image-steganography-using-python-2bbbee2c69a2
+
+Exfil obfuscation - same as C2 obfuscation but uploaded encoded data to "exfil" folder in Google drive
